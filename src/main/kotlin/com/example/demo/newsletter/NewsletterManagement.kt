@@ -2,8 +2,8 @@ package com.example.demo.newsletter
 
 import com.example.demo.dungeon.DragonCreated
 import io.github.oshai.kotlinlogging.KotlinLogging
+import org.jmolecules.ddd.annotation.Service
 import org.springframework.modulith.ApplicationModuleListener
-import org.springframework.stereotype.Service
 
 private val logger = KotlinLogging.logger {}
 

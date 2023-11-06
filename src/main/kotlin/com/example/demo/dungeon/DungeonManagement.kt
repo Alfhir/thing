@@ -1,8 +1,8 @@
 package com.example.demo.dungeon
 
 import com.example.demo.dungeon.internal.Dragon
+import org.jmolecules.ddd.annotation.Service
 import org.springframework.context.ApplicationEventPublisher
-import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service

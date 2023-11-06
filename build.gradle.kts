@@ -29,8 +29,7 @@ dependencies {
 	implementation("org.springframework.modulith:spring-modulith-starter-jpa") // includes core https://docs.spring.io/spring-modulith/docs/current-SNAPSHOT/reference/html/#appendix.artifacts
 
 	implementation("org.jmolecules:kmolecules-ddd:1.9.0")
-
-	// Needed with Spring Data 2021.0? implementation("org.jmolecules.integrations:jmolecules-spring:1.6.0")
+	implementation("org.jmolecules.integrations:jmolecules-spring:1.6.0")
 
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")

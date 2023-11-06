@@ -29,7 +29,7 @@ dependencies {
 	implementation("org.springframework.modulith:spring-modulith-starter-core")
 	implementation("org.springframework.modulith:spring-modulith-starter-jdbc")
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
-	implementation("org.jmolecules:jmolecules-ddd:1.9.0")
+	implementation("org.jmolecules:kmolecules-ddd:1.9.0")
 	implementation("org.webjars.npm:htmx.org:1.9.6")
 
 	implementation("io.github.oshai:kotlin-logging-jvm:5.1.0")

@@ -25,7 +25,7 @@ dependencies {
 
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 
-	implementation("org.springframework.boot:spring-boot-starter-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.modulith:spring-modulith-starter-jpa") // includes core https://docs.spring.io/spring-modulith/docs/current-SNAPSHOT/reference/html/#appendix.artifacts
 
 	implementation("org.jmolecules:kmolecules-ddd:1.9.0")

@@ -32,8 +32,7 @@ dependencies {
 	implementation("org.jmolecules:kmolecules-ddd:1.9.0")
 	implementation("org.webjars.npm:htmx.org:1.9.6")
 	implementation("io.github.oshai:kotlin-logging-jvm:5.1.0")
-
-	runtimeOnly("org.postgresql:postgresql")
+	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.modulith:spring-modulith-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")

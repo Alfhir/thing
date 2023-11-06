@@ -1,4 +1,4 @@
-package com.example.demo.dungeon
+package com.example.demo.dungeon.internal
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.EnableConfigurationProperties
@@ -9,10 +9,9 @@ class DungeonConfiguration
 
 @ConfigurationProperties(prefix = "com.example.demo.dungeon")
 class DungeonParentProperties(
-    val dimensions: Dimensions= Dimensions(1.meter, 1.meter, 1.meter)){
-    class Dimensions(val length: Meter, val width: Meter, val height: Meter){
-
-    }
+    val dimensions: Dimensions = Dimensions(1.meter, 1.meter, 1.meter)
+){
+    class Dimensions(val length: Meter, val width: Meter, val height: Meter)
 }
 
 @JvmInline

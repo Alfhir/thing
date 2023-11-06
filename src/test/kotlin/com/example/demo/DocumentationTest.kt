@@ -14,5 +14,6 @@ class DocumentationTest {
             .writeDocumentation()
             .writeModulesAsPlantUml()
             .writeIndividualModulesAsPlantUml()
+            .writeModuleCanvases()
     }
 }

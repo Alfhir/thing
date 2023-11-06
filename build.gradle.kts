@@ -31,9 +31,7 @@ dependencies {
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
 	implementation("org.jmolecules:kmolecules-ddd:1.9.0")
 	implementation("org.webjars.npm:htmx.org:1.9.6")
-
 	implementation("io.github.oshai:kotlin-logging-jvm:5.1.0")
-	implementation("org.slf4j:slf4j-simple:2.0.3")
 
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

@@ -30,6 +30,21 @@ dependencies {
 
 	implementation("org.jmolecules:kmolecules-ddd:1.9.0")
 
+	// Needed with Spring Data 2021.0? implementation("org.jmolecules.integrations:jmolecules-spring:1.6.0")
+
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
+	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+	implementation("org.flywaydb:flyway-core")
+
+	// observability
+	//runtime("org.springframework.modulith:spring-modulith-starter-insight") includes actuator and obs modules
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+	// htmx
+
 	// Needed with Spring Data 2021.0?
 	implementation("org.jmolecules.integrations:jmolecules-spring:1.6.0")
 

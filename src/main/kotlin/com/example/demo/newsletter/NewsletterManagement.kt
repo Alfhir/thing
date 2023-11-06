@@ -8,10 +8,10 @@ import org.springframework.modulith.ApplicationModuleListener
 private val logger = KotlinLogging.logger {}
 
 @Service
-class NewsletterManagement {
+open class NewsletterManagement {
     @ApplicationModuleListener
     @Throws(InterruptedException::class)
-    fun on(event: DragonCreated) {
+    open fun on(event: DragonCreated) {
         val monsterId = event.dragonId.id
         logger.info { "Received dragon creation (ID = $monsterId)." }
         // simulate work

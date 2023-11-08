@@ -34,7 +34,6 @@ flyway {
 	user = dbConfig.username
 	password = dbConfig.password
 	locations = arrayOf("filesystem:./src/main/resources/db/migration")
-	placeholders = mapOf("schema_name" to "dungeon")
 }
 
 byteBuddy {

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test
 import org.springframework.modulith.core.ApplicationModules
 import org.springframework.modulith.docs.Documenter
 
+// Generate documentation from code
 class DocumentationTest {
 
     val modules: ApplicationModules = ApplicationModules.of(Application::class.java)

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test
 import org.springframework.modulith.core.ApplicationModules
 import org.springframework.modulith.docs.Documenter
 
-// Verify the modular structure and generate documentation for the modules.
+// Verify the modular structure
 class ModularityTests {
 
     val modules: ApplicationModules = ApplicationModules.of(Application::class.java)

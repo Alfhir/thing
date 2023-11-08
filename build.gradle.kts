@@ -41,7 +41,6 @@ dependencies {
 	// starters
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.modulith:spring-modulith-starter-jpa") // includes core https://docs.spring.io/spring-modulith/docs/current-SNAPSHOT/reference/html/#appendix.artifacts
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 
@@ -49,21 +48,27 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 
-	// integrations
+	//modulith
+	implementation("org.springframework.modulith:spring-modulith-starter-jpa") // includes core
+
+	// jmolecules
+	implementation(platform("org.jmolecules:jmolecules-bom:2021.1.0"))
 	implementation("org.jmolecules:kmolecules-ddd:1.9.0")
-	implementation("org.jmolecules.integrations:jmolecules-spring:1.6.0")
-	implementation("org.jmolecules.integrations:jmolecules-jpa:1.6.0")
-	compileOnly("org.jmolecules.integrations:jmolecules-bytebuddy-nodep:0.17.0")
+	implementation("org.jmolecules:jmolecules-events")
+	implementation("org.jmolecules.integrations:jmolecules-spring")
+	implementation("org.jmolecules.integrations:jmolecules-jpa")
+	compileOnly("org.jmolecules.integrations:jmolecules-bytebuddy")
+
+	// thymeleaf spring security integration
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
 
 	// observability
-	//runtime("org.springframework.modulith:spring-modulith-starter-insight") includes actuator and obs modules
-	//implementation("org.springframework.boot:spring-boot-starter-actuator") // watch module interaction at runtime
+	//runtime("org.springframework.modulith:spring-modulith-starter-insight")
+	//implementation("org.springframework.boot:spring-boot-starter-actuator")
 
 	// flyway & pg driver as provided by start.spring.io
-	implementation("org.flywaydb:flyway-core")
+	// implementation("org.flywaydb:flyway-core")
 	runtimeOnly("org.postgresql:postgresql")
-
 
 	// htmx
 	implementation("org.webjars.npm:htmx.org:1.9.6")

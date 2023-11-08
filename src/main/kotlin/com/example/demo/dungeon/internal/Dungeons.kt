@@ -1,7 +1,6 @@
 package com.example.demo.dungeon.internal
 
-import org.jmolecules.ddd.annotation.Repository
+import org.springframework.data.repository.CrudRepository
 
-@Repository
-interface Dungeons
+interface Dungeons: CrudRepository<Dungeon, DungeonIdentifier>
 

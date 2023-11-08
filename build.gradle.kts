@@ -39,7 +39,7 @@ flyway {
 
 byteBuddy {
 	transformation{
-		plugin = JMoleculesPlugin
+		plugin = org.jmolecules.bytebuddy.JMoleculesPlugin::class.java
 	}
 }
 

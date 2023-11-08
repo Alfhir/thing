@@ -54,12 +54,12 @@ dependencies {
 	// integrations
 	implementation("org.jmolecules:kmolecules-ddd:1.9.0")
 	implementation("org.jmolecules.integrations:jmolecules-spring:1.6.0")
-	implementation("org.jmolecules.integrations:jmolecules-bytebuddy:1.6.0")
+	compileOnly("org.jmolecules.integrations:jmolecules-bytebuddy-nodep:1.6.0")
 	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
 
 	// observability
 	//runtime("org.springframework.modulith:spring-modulith-starter-insight") includes actuator and obs modules
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	//implementation("org.springframework.boot:spring-boot-starter-actuator") // watch module interaction at runtime
 
 	// persistence
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")

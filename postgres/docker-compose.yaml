@@ -7,6 +7,11 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pg-14-dungeons-vol:/var/lib/postgresql/data/
-volumes:
-  pg-14-dungeons-vol: {}
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  dungeons-app:
+    build:
+      context: ../
+    ports:
+      - "8080:8080"
+    depends_on:
+      - local-database

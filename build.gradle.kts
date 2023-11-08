@@ -21,10 +21,10 @@ plugins {
 }
 
 flyway {
-	driver = "org.postgresql.Driver"
 	url = "jdbc:postgresql://localhost:5432/dungeons"
 	user = "postgres"
 	password = "postgres"
+	driver = "org.postgresql.Driver"
 	locations = arrayOf("filesystem:./src/main/resources/db/migration")
 }
 
@@ -70,8 +70,10 @@ dependencies {
 	//implementation("org.springframework.boot:spring-boot-starter-actuator") // watch module interaction at runtime
 
 	// db evolution & pg driver
-	implementation("org.flywaydb:flyway-core")
-	runtimeOnly("org.postgresql:postgresql")
+	implementation("org.flywaydb:flyway-core:10.0.0")
+	implementation("org.flywaydb:flyway-database-postgresql:10.0.0")
+	implementation("org.postgresql:postgresql:42.2.27")
+
 
 	// htmx
 	implementation("org.webjars.npm:htmx.org:1.9.6")

@@ -1,12 +1,12 @@
 version: '3.8'
 services:
   local-database:
-    image: "postgres:16.0"
+    image: "postgres:14.0"
     env_file:
       - postgres.env
     ports:
       - "5432:5432"
     volumes:
-      - pg-dungeons-volume:/var/lib/postgresql/data/
+      - pg-14-dungeons-vol:/var/lib/postgresql/data/
 volumes:
-  pg-dungeons-volume: {}
+  pg-14-dungeons-vol: {}

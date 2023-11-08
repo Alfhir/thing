@@ -20,19 +20,11 @@ plugins {
 	kotlin("plugin.jpa") version "1.8.22"
 }
 
-data class DataSource(
-	val driver: String = System.getenv("driver") ?: project.property("driver") as String,
-	val jdbcUrl: String = System.getenv("jdbc_url") ?: project.property("jdbc_url") as String,
-	val username: String = System.getenv("username") ?: project.property("username") as String,
-	val password: String = System.getenv("password") ?: project.property("password") as String
-)
-val dbConfig = DataSource()
-
 flyway {
-	driver = dbConfig.driver
-	url = dbConfig.jdbcUrl
-	user = dbConfig.username
-	password = dbConfig.password
+	driver = "org.postgresql.Driver"
+	url = "jdbc:postgresql://localhost:5432/dungeons"
+	user = "postgres"
+	password = "postgres"
 	locations = arrayOf("filesystem:./src/main/resources/db/migration")
 }
 

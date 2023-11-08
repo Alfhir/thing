@@ -64,7 +64,7 @@ dependencies {
 	// persistence
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.flywaydb:flyway-core")
-	runtimeOnly("com.h2database:h2")
+	runtimeOnly("org.postgresql:postgresql")
 
 	// htmx
 	implementation("org.webjars.npm:htmx.org:1.9.6")

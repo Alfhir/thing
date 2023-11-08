@@ -7,6 +7,6 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pg-volume:/var/lib/postgresql/data/
+      - pg-dungeons-volume:/var/lib/postgresql/data/
 volumes:
-  pg-volume: {}
+  pg-dungeons-volume: {}

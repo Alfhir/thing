@@ -12,7 +12,6 @@ value class DungeonIdentifier(val id: UUID = UUID.randomUUID()): Identifier {
 }
 
 @Table(name = "dungeon")
-// @Entity // Todo: This shouldn't be necessary, maybe put an issue on jMolecules to ask about it
 data class Dungeon(
     override val id: DungeonIdentifier = DungeonIdentifier(),
 ) : AggregateRoot<Dungeon, DungeonIdentifier>

@@ -14,18 +14,9 @@ plugins {
 	id("org.springframework.boot") version "3.1.5"
 	id("io.spring.dependency-management") version "1.1.3"
 	id("net.bytebuddy.byte-buddy-gradle-plugin") version "1.14.9"
-	id("org.flywaydb.flyway") version "10.0.0"
 	kotlin("jvm") version "1.8.22"
 	kotlin("plugin.spring") version "1.8.22"
 	kotlin("plugin.jpa") version "1.8.22"
-}
-
-flyway {
-	url = "jdbc:postgresql://localhost:5432/dungeons"
-	user = "postgres"
-	password = "postgres"
-	driver = "org.postgresql.Driver"
-	locations = arrayOf("filesystem:./src/main/resources/db/migration")
 }
 
 byteBuddy {
@@ -69,10 +60,9 @@ dependencies {
 	//runtime("org.springframework.modulith:spring-modulith-starter-insight") includes actuator and obs modules
 	//implementation("org.springframework.boot:spring-boot-starter-actuator") // watch module interaction at runtime
 
-	// db evolution & pg driver
-	implementation("org.flywaydb:flyway-core:10.0.0")
-	implementation("org.flywaydb:flyway-database-postgresql:10.0.0")
-	implementation("org.postgresql:postgresql:42.2.27")
+	// flyway & pg driver as provided by start.spring.io
+	implementation("org.flywaydb:flyway-core")
+	runtimeOnly("org.postgresql:postgresql")
 
 
 	// htmx

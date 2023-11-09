@@ -37,41 +37,22 @@ repositories {
 }
 
 dependencies {
-
-	// starters
-	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-security")
-	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-
-	// kotlin
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-
-	//modulith
 	implementation("org.springframework.modulith:spring-modulith-starter-jpa") // includes core
 
-	// jmolecules
 	implementation(platform("org.jmolecules:jmolecules-bom:2021.1.0"))
 	implementation("org.jmolecules:kmolecules-ddd:1.9.0")
 	implementation("org.jmolecules:jmolecules-events")
 	implementation("org.jmolecules.integrations:jmolecules-spring")
 	implementation("org.jmolecules.integrations:jmolecules-jpa")
-	compileOnly("org.jmolecules.integrations:jmolecules-bytebuddy")
 
-	// thymeleaf spring security integration
-	implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
+	compileOnly("org.jmolecules.integrations:jmolecules-bytebuddy")
 
 	// observability
 	//runtime("org.springframework.modulith:spring-modulith-starter-insight")
 	//implementation("org.springframework.boot:spring-boot-starter-actuator")
-
-	// flyway & pg driver as provided by start.spring.io
-	// implementation("org.flywaydb:flyway-core")
-	runtimeOnly("org.postgresql:postgresql")
-
-	// htmx
-	implementation("org.webjars.npm:htmx.org:1.9.6")
 
 	// logging
 	implementation("io.github.oshai:kotlin-logging-jvm:5.1.0")

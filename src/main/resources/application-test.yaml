@@ -6,4 +6,6 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
+      #naming.implicit-strategy: ...
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect

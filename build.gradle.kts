@@ -50,6 +50,8 @@ dependencies {
 
 	compileOnly("org.jmolecules.integrations:jmolecules-bytebuddy")
 
+	runtimeOnly("org.postgresql:postgresql")
+
 	// observability
 	//runtime("org.springframework.modulith:spring-modulith-starter-insight")
 	//implementation("org.springframework.boot:spring-boot-starter-actuator")

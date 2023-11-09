@@ -1,6 +1,5 @@
 package com.example.demo.dungeon.internal
 
-import jakarta.persistence.Entity
 import jakarta.persistence.Table
 import org.jmolecules.ddd.types.AggregateRoot
 import org.jmolecules.ddd.types.Identifier
